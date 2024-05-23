@@ -23,12 +23,12 @@ cd NLP-Sentiment-Classification
 ```
 
 ```text
-pip install -r requirements.txt
+python3 -m venv nlptask
+source nlptask/bin/activate
 ```
 
 ```text
-python3 -m venv nlptask
-source nlptask/bin/activate
+pip install -r requirements.txt
 ```
 
 ### Now you can run
