@@ -26,7 +26,7 @@ The function is utilized within the code for binary classification tasks, which 
 
 * **optimizer = torch.optim.Adam(model.parameters())**
 
-The "Adam" algorithm is an adaptive moment estimation method that combines the advantages of two other extensions of stochastic gradient descent (SGD), namely AdaGrad and RMSProp. Its adaptive learning rate mechanism is used to compute gradients, update bias moments, correct bias moments, and to update parameters. It is used in code in the training loop.
+The "Adam" algorithm is an adaptive moment estimation method that combines the advantages of two other extensions of stochastic gradient descent (SGD), namely AdaGrad and RMSProp. Its adaptive learning rate mechanism is used to compute gradients, update bias moments, correct bias moments, and to update parameters.
 
 ## Prerequisites
 Ensure you have the following installed on your machine:
