@@ -16,49 +16,50 @@ This could be a valuable contribution to a range of applications, including cust
 * Model Training and Evaluation
 
 ## Setup
-* ### Writer = SummaryWriter()
+### SummaryWriter
 
 It initializes a log directory where all the training information will be saved. This information can later be visualized using TensorBoard.
 
-Documentation:
-* [Tensorboard](https://www.tensorflow.org/tensorboard/scalars_and_keras)
+[Tensorboard](https://www.tensorflow.org/tensorboard/scalars_and_keras)
 
 ***
 
-* ### Model = SentimentClassifier 
+### Sentiment Classifier (neural network)
 
 The designed neural network employs vectors of length 384 (embeddings) and generates a binary response (sigmoid) as its output.
 There are 3 hidden layers compromising 256, 128, 64 neurons. The activation functions are set to nn.ReLU. The model uses BatchNorm1d normalization.
 
-Documentation:
-* [BatchNorm1d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html#torch.nn.BatchNorm1d)
 
-* [ReLU](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU)
-
-* [Sigmoid](https://pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html#torch.nn.Sigmoid)
-
-* [Linear](https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear)
+[BatchNorm1d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html#torch.nn.BatchNorm1d)
+[ReLU](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU)
+[Sigmoid](https://pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html#torch.nn.Sigmoid)
+[Linear](https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear)
 
 ***
 
 
-* ### loss_function = torch.nn.BCEWithLogitsLoss()
+### loss_function = BCEWithLogitsLoss
 
 This loss combines a Sigmoid layer and the BCELoss in one single class. This version is more numerically stable than using a plain Sigmoid followed by a BCELoss as, by combining the operations into one layer, we take advantage of the log-sum-exp trick for numerical stability. 
 
-Documentation:
-* [BCEWithLogitsLoss](https://pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html#torch.nn.BCEWithLogitsLoss)
+[BCEWithLogitsLoss](https://pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html#torch.nn.BCEWithLogitsLoss)
 
 ***
 
-* ### optimizer = torch.optim.AdamW(model.parameters())
+### optimizer = AdamW
 
 AdamW optimizer is used in this project instead of regular adam. Adaptive gradient methods such as Adam may lead to worse generalization. There is a certain inequivalence of L2 regularization and weight decay for Adam. Adam(W) with decoupled weight decay has been observed to yield substantially better generalization performance than the common implementation of Adam with L2 regularization.
 
-Documentation:
-* [AdamW documentation page](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html#torch.optim.AdamW)
+[AdamW](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html#torch.optim.AdamW)
+[arXiv:1711.05101](https://arxiv.org/abs/1711.05101)
 
-* [arXiv:1711.05101](https://arxiv.org/abs/1711.05101)
+***
+
+### scheduler = CosineAnnealingLR
+
+Reduces the learning rate following a cosine decay pattern, which gradually decreases the learning rate to zero.
+
+[CosineAnnealingLR](https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html#torch.optim.lr_scheduler.CosineAnnealingLR)
 
 ***
 
