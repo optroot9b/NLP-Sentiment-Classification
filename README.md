@@ -31,10 +31,13 @@ The designed neural network employs vectors of length 384 (embeddings) and gener
 There are 3 hidden layers compromising 256, 128, 64 neurons. The activation functions are set to nn.ReLU. The model uses BatchNorm1d normalization.
 
 Documentation:
-*[BatchNorm1d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html#torch.nn.BatchNorm1d)
-*[ReLU](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU)
-*[Sigmoid](https://pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html#torch.nn.Sigmoid)
-*[Linear](https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear)
+* [BatchNorm1d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html#torch.nn.BatchNorm1d)
+
+* [ReLU](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU)
+
+* [Sigmoid](https://pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html#torch.nn.Sigmoid)
+
+* [Linear](https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear)
 
 ***
 
@@ -54,7 +57,7 @@ AdamW optimizer is used in this project instead of regular adam. Adaptive gradie
 
 Documentation:
 * [AdamW documentation page](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html#torch.optim.AdamW)
-Reference:
+
 * [arXiv:1711.05101](https://arxiv.org/abs/1711.05101)
 
 ***
