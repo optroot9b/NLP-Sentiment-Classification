@@ -5,9 +5,8 @@ The model is designed to analyse textual data based on the data scraped yelp rev
 This could be a valuable contribution to a range of applications, including customer feedback analysis and product reviews.
 
 ### Upon evaluation of the unseen data (test data), the following results were established:
-* **Test Accuracy: 0.9229828715324402**
-* **Test F1 Score: 0.9512761020881672**
-* **Test ROC AUC Score: 0.9637775140962314**
+* **Test Accuracy: 0.9058679938316345**
+* **Test F1 Score: 0.9394177812745869**
 
 # Features
 * Data Loading and EDA
