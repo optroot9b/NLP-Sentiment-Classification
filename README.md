@@ -20,7 +20,7 @@ This could be a valuable contribution to a range of applications, including cust
 
 Initializes a log directory where all the training information will be saved. This information can later be visualized using TensorBoard.
 
-To view the model metrics, type tensorboard --logdir .\runs\ in your terminal.
+To view the model metrics, type tensorboard --logdir runs in your terminal.
 
 [Tensorboard](https://www.tensorflow.org/tensorboard/scalars_and_keras)
 
@@ -30,7 +30,7 @@ To view the model metrics, type tensorboard --logdir .\runs\ in your terminal.
 
 The designed neural network employs vectors of length 384 (embeddings) and generates a binary response (sigmoid) as its output.
 
-The number of hidden neurons in two layers are 512 and 256. The activation functions are set to nn.ReLU. The model uses BatchNorm1d normalization.
+The number of hidden neurons in two layers are 128 and 64. The activation functions are set to nn.ReLU. The model uses BatchNorm1d normalization.
 
 
 [BatchNorm1d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html#torch.nn.BatchNorm1d)
